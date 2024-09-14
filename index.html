@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>ShopNow</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <h1>Todo App</h1>  
+    <h3>Enter "list" to show all Task</h3>
+    <h3>Enter "add" to add a Task</h3>
+    <h3>Enter "delete" to delete a Task</h3>
+    <h3>Enter  "quit" to quit the Taskk</h3> -->
+
+    <div class="main-nav">
+      <div class="logo">
+        <!-- <i class="fa-solid fa-store"></i> -->
+        <h3>ShopCove</h3>
+      </div>
+      <div class="search-box">
+        <input type="text" />
+        <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+      </div>
+      <div class="nav-options">
+        <button id="home-btn" class="active">
+          Home <i class="fa-solid fa-house"></i>
+        </button>
+        <button id="cart-btn">
+          Cart <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-items" id="cart-items">0</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="main-container">
+
+      <div class="card-container-main ">
+            <div class="card-container" id="card-container">
+            <!-- <div class="card">
+                        <div class="product-details">
+                            <div class="product-img">
+                                
+                                <img src="./laptop.jpg" alt="">
+                            </div>
+                            <div class="card-description">
+                                <h3 class="product-name"><span class="product-brand">GameMax</span> Gaming Laptop 17   </h3>
+                                <p class="product-description">High-performance gaming laptop with 32GB RAM and RTX 3080 GPU.</p>
+                                <p>Left <span class="product-stock">15</span></p>
+                                <div class="product-price">
+                                    <p class="price"> Rs.1799.99</p>
+                                </div>
+                                <div class="add">
+                                    <button><a href="#">Add to cart</a></button>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+      </div>
+
+      <div class="cart-section hide" id="cart-section">
+        <div class="cart-total-price" tabindex="1">
+          <div>
+            <p class="total">
+              Subtotal -
+              <span class="sub-total"
+                ><span class="rs">₹</span><span id="sub-total">0</span></span
+              >
+            </p>
+            <p class="free-delivery">
+              Your order is eligible for Free Delivery choose free delivery
+              option at checkout.
+            </p>
+            <!-- <input type="range" min="0" max="100" > -->
+
+            <button class="buy-now" id="buy-now" onclick="proceedTocheckout()">
+              Proceed to Buy (<span id="total-carts-item">1 </span> items)
+            </button>
+
+            <button
+              class="buy-now"
+              id="add-product"
+              onclick="addProductTocheckout()"
+            >
+              Add product to cart
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="cart-section-container"
+          id="cart-section-container"
+          tabindex="2"
+        ></div>
+
+        <div class="checkout hide" id="checkout">
+            <h2 class="heading-checkout">Via Checkout Express  <i class="fa-solid fa-xmark close" id="close"></i> </h2>
+           <div class="checkout-container">
+                <div>
+                    <div class="inner-div">
+                        <form action="#" class="checkout-form">
+                            <h2 class="inner-heading"><span class="numbering">1</span>Details</h2>
+
+                           <div class="form-input">
+                                <label for="email">Enter Your Email </label>
+                                <span class="disclamer">New customer can receiver 10% off there first order. Already have an account? You'll be prompted to log in </span>
+
+                                <input type="email " placeholder="Email Address*">
+
+                           </div>
+
+                           <div class="form-input mb-18">
+                                <label for="phonenumber">Enter Your Mobile Number </label>
+
+                                <input type="tel" name="phonenumber" placeholder="Mobile Number*">
+
+                            </div>
+
+
+                            <button class="buy-now pay">Verify Now</button>
+
+                        </form>
+                    </div>
+
+                    <div class="inner-div">
+                        <h2 class="inner-heading"><span class="numbering">2</span>Shipping</h2>
+                        <form action="#" class="checkout-form">
+
+                           <div class="form-input">
+                                <label for="address">Enter Your Shipping Address </label>
+                                <!-- <input type="address " placeholder="Shipping Address*"> -->
+                                 <textarea name="address" id="address" placeholder="Shipping Address*"></textarea>
+                           </div>
+
+                            <button class="buy-now pay">Verify Now</button>
+
+                        </form>
+                    </div>
+                    <div class="inner-div">
+                        <h2 class="inner-heading"><span class="numbering">3</span>Payment Method</h2>
+                        <button class="buy-now pay"><i class="fa-brands fa-cc-paypal"></i> PayPal</button>
+                        <button class="buy-now pay"><i class="fa-brands fa-google-pay"></i> Google pay</button>
+                        <button class="buy-now pay"><i class="fa-brands fa-paypal"></i> Paytm</button>
+                        <button class="buy-now pay"><i class="fa-brands fa-amazon-pay"></i> Amazon pay</button>
+                        <button class="buy-now pay"><i class="fa-solid fa-credit-card"></i> Debit Card</button>
+                        <button class="buy-now pay"><i class="fa-regular fa-credit-card"></i> Credit card</button>
+                    </div>
+                    
+                </div>
+
+
+
+                <div class="inner-div checkout-container-card">
+                    <div class="checkout-card-heading">
+                        <p class="checkout-cart-heading"> <i class="fa-solid fa-cart-shopping"></i> Cart</p>
+                        <p class="end" class="checkout-total-price">Rs 7000</p>
+                    </div>
+                    <div class="checkout-cart-products">
+                        <div class="checkout-cart-product">
+                            <div class="checkout-image">
+                                <img src="./laptop.jpg" >
+                            </div>
+                            <div>
+                                <p class="checkout-cart-product-name">Smartphone X</p>
+                                <div class="checkout-cart-details">
+                                    <p class="checkout-cart-product-price">
+                                        <span class="qty">₹</span>
+                                        <span id="checkout-cart-product-price">5000</span>
+                                    </p>
+                                    <p class="checkout-cart-product-qty"><span class="qty">Qty</span><span class="qty" id="checkout-cart-product-price"> 10</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout-cart-product">
+                            <div class="checkout-image">
+                                <img src="./laptop.jpg" >
+                            </div>
+                            <div>
+                                <p class="checkout-cart-product-name">Smartphone X</p>
+                                <div class="checkout-cart-details">
+                                    <p class="checkout-cart-product-price">
+                                        <span class="qty">₹</span>
+                                        <span id="checkout-cart-product-price">5000</span>
+                                    </p>
+                                    <p class="checkout-cart-product-qty"><span class="qty">Qty</span><span class="qty"  id="checkout-cart-product-price qty"> 10</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                       <form action="#" class="apply-promocode">
+                        <input type="text"><button>Apply</button>
+                       </form>
+                    </div>
+
+                    <hr>
+
+                    <div class="cart-Pricing-details">
+                        <div class="row">
+                            <p>Subtotal</p>
+                            <span class="qty">₹ 
+                                <span id="checkout-subTotal">7000</span>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <p>Estimate Shipping</p>
+                            <span class="qty">Free</span>
+                        </div>
+                        <div class="row">
+                            <p>Apply Offer</p>
+                            <span class="qty">No offer</span>
+                        </div>
+                        <div class="row">
+                            <p>Total</p>
+                            <span class="qty  final-price">₹ 
+                                <span class="checkout-subTotal">7000</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button class="buy-now pay">Place Order</button>
+
+                </div>
+
+
+
+           </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./product.js"></script>
+  </body>
+</html>
