@@ -15,13 +15,21 @@ body {
 .main-container {
   width: 100%;
   /* background-color: lightblue; */
-  height: 100%;
+  height: 1500px;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+
+.card-container-main h1 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
 .card-container {
   width: 90%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 50px;
   height: 100%;
   /* padding: 24px; */
@@ -34,11 +42,11 @@ body {
   /* margin: 100px auto 0 auto; */
 }
 
-/* .card-container {
+.card-container {
     max-height: 600px;
     overflow: auto;
     scrollbar-width: 2px;
-} */
+}
 
 a {
   color: inherit;
@@ -255,14 +263,25 @@ button {
 /* Cart Section */
 .cart-section {
   width: 100%;
-  min-height: 600px;
-  max-height: 100vh;
   margin-top: 100px;
-  /* background-color: red; */
-  /* padding: 24px; */
+  height: fit-content;
   margin-bottom: 200px;
-  position: relative;
+  /* position: relative; */
+  
 }
+
+.low-opacity {
+  opacity:.2;
+}
+
+.high-opacity {
+  opacity: 1;
+}
+
+/* .cart-section-container {
+  min-height: 80%;
+  overflow: auto;
+} */
 
 .carts {
   display: grid;
@@ -338,6 +357,9 @@ button {
   padding: 24px 0 24px 12px;
   color: #fff;
   margin-bottom: 12px;
+ 
+  
+ 
 }
 
 .total {
@@ -435,11 +457,12 @@ input[type="number"] {
 
 .checkout {
     width: 90%;
-    max-height: 600px;
+    /* max-height: 600px; */
+    height: fit-content;
     margin: 0 auto;
     background-color: #e3e6e6;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 24px;
@@ -448,8 +471,12 @@ input[type="number"] {
    /* display: none; */
    /* opacity: 10000; */
    z-index: 10000;
-   overflow: auto;
+   overflow: hidden;
    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+
+
+
+   
 }
 
 .inner-heading{
@@ -716,4 +743,99 @@ button:disabled {
 
 
 
+/* Footer */
 
+
+.footer {
+  width: 100%;
+  padding: 18px 0 18px 62px;
+  background-color: #121212;
+  color: #fff;
+  /* position: absolute;
+  bottom: 0; */
+}
+
+.footer-main-content {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.footer-tnc-details h3 {
+  font-size: 24px;
+  font-weight: 900;
+  font-size: 32px;
+  font-family: "Protest Guerrilla", sans-serif;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.footer-tnc-details a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+
+.subscribe h1{
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 92px;
+  /* font-family: sans-serif; */
+}
+
+.subscribe input {
+  padding: 12px 24px;
+  background-color: inherit;
+  border: 1px solid #fff;
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.subscribe button {
+  padding: 12px 24px;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.subscribe button:hover {
+  background-color: #121212;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+ grid-template-columns: auto;
+}
+
+.footer-payment-icons .fa {
+  width: 30px;
+  height: 30px;
+  font-size: 32px;
+  margin-bottom: 78px;
+  cursor: pointer;
+}
+
+.copyrigh-text {
+  color: #fff;
+  font-family: sans-serif;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
